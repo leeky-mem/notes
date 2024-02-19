@@ -72,4 +72,9 @@ Run a program we can as root: \
 `sudo LD_PRELOAD=/path/to/shell.so <sudoable program>`
 
 ## SUID / SGID
+Files with the SUID bit set do not drop elevated privileges when executed by a different user.
 
+Find binaries with SUID bit set: \
+`find / -type f -perm -04000 -ls 2>/dev/null`
+
+[This](https://gtfobins.github.io/#+suid) list contains binaries that can be used for privilage escalation when SUID bit is set:
