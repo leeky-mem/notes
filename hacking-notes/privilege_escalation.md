@@ -17,10 +17,10 @@
 
 **Network** \
 `ifconfig` \
-`ip toute` \
+`ip route` \
 `netstat` - shows info about existing communications \
->`-a` - shows all listening ports and established comms \
->`-at` / `-au` - lists TCP reso. UDP \
+>`-a` - shows all listening ports and established conns \
+>`-at` / `-au` - lists TCP resp. UDP \
 >`-l` - list ports in listening mode \
 >`-s` - shows usage statistics by protocol, can be combiled with spesific protocol filters \
 >`-p` - shows connections with service name and PID info, can also be combined with specific protocols \
@@ -28,7 +28,7 @@
 
 **find** \
 see [find](https://github.com/leeky-mem/linux-notes/blob/main/commands.md) for basics. For privilege escalation searching for specific permissions is important. \
-`-perm mode` - mode can be u,g,o(i.e user,goup,other). In this mode permission bits must match exactly. `-perm o=w` matches onls file which have mode 0020. \
+`-perm mode` - mode can be u,g,o(i.e user,goup,other). In this mode permission bits must match exactly. `-perm o=w` matches only files with mode 0020. \
 `-perm -mode` - matches all files wich have mode, but not exclusivly. \  
 `find / -perm -u=s -type f 2>/dev/null` - find files with SUID bit set. SUID bit allows to run the file with the privilege level of the owner.
 
@@ -71,5 +71,5 @@ Compile as a shared library: \
 Run a program we can as root: \
 `sudo LD_PRELOAD=/path/to/shell.so <sudoable program>`
 
-
+## SUID / SGID
 
