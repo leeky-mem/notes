@@ -78,3 +78,12 @@ Find binaries with SUID bit set: \
 `find / -type f -perm -04000 -ls 2>/dev/null`
 
 [This](https://gtfobins.github.io/#+suid) list contains binaries that can be used for privilage escalation when SUID bit is set:
+
+## Capabilities
+Capabilities are a way for sysadmins to give an application more capabilities for unprivileged users. This way, the admin does not need to elevate the privileges of a user in order to do a specific task. [GTFO](https://gtfobins.github.io/#+capabilities) has a good list of binaries that can be used with certain caps.
+
+List binaries with capabilities: \
+`getcap -r / 2>/dev/null`
+
+The `setuid` capability can be used to set the uid of a shell to root (uid=0).
+
